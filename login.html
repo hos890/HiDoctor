@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ورود | Hi Doctor</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="login-header">
+    <h1>ورود به Hi Doctor</h1>
+  </header>
+
+  <main class="login-main">
+    <form class="login-form" action="dashboard.html" method="post">
+      <div class="form-group">
+        <label for="email">ایمیل یا شماره موبایل:</label>
+        <input type="text" id="email" name="email" placeholder="ایمیل یا موبایل خود را وارد کنید" required />
+      </div>
+      <div class="form-group">
+        <label for="password">رمز عبور:</label>
+        <input type="password" id="password" name="password" placeholder="رمز عبور خود را وارد کنید" required minlength="6" />
+      </div>
+      <button type="submit" class="btn">ورود</button>
+    </form>
+
+    <p class="register-prompt">
+      حساب ندارید؟ <a href="register.html">ثبت‌نام کنید</a>
+    </p>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>داشبورد دکتر | Hi Doctor</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="doctor-header">
+    <h1>داشبورد دکتر</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="doctor-main">
+    
+    <!-- Patient List -->
+    <section class="doctor-patients">
+      <h2>لیست بیماران</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>نام بیمار</th>
+            <th>وضعیت سلامت</th>
+            <th>علائم حیاتی</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>مهدی احمدی</td>
+            <td>حالت بحرانی</td>
+            <td>فشار خون: ۱۸/۱۰، ضربان قلب: ۹۰</td>
+          </tr>
+          <!-- سایر بیماران -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Messages and Alerts -->
+    <section class="doctor-messages">
+      <h2>پیغام‌ها و هشدارها</h2>
+      <ul>
+        <li>بیمار مهدی احمدی نیاز به مراقبت فوری دارد.</li>
+        <!-- سایر هشدارها -->
+      </ul>
+    </section>
+
+    <!-- Emergency Alert Button -->
+    <button onclick="showEmergencyAlert()" class="btn alert-btn">نمایش هشدار</button>
+  </main>
+
+  <!-- JavaScript -->
+  <script>
+    function showEmergencyAlert() {
+      alert("هشدار: بیمار مهدی احمدی نیاز به مراقبت فوری دارد!");
+    }
+  </script>
+
+</body>
+</html>

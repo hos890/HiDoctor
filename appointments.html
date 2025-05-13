@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مدیریت نوبت‌ها | Hi Doctor</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="appointments-header">
+    <h1>مدیریت نوبت‌ها</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="appointments-main">
+
+    <!-- Future Appointments -->
+    <section class="appointments-section">
+      <h2>نوبت‌های آینده</h2>
+      <table class="appointments-table">
+        <thead>
+          <tr>
+            <th>تاریخ</th>
+            <th>پزشک</th>
+            <th>وضعیت</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>۱۵ اردیبهشت ۱۴۰۴</td>
+            <td>دکتر علیزاده</td>
+            <td>تأیید شده</td>
+          </tr>
+          <tr>
+            <td>۱۸ اردیبهشت ۱۴۰۴</td>
+            <td>دکتر محمدی</td>
+            <td>در انتظار تأیید</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Appointment Form -->
+    <section class="appointments-section">
+      <h2>ثبت نوبت جدید</h2>
+      <form action="#" method="POST" class="appointment-form">
+        <label for="doctor">انتخاب پزشک:</label>
+        <select id="doctor" name="doctor" required>
+          <option value="">انتخاب کنید...</option>
+          <option value="doctor1">پزشک ۱</option>
+          <option value="doctor2">پزشک ۲</option>
+          <option value="doctor3">پزشک ۳</option>
+        </select>
+
+        <label for="date">تاریخ:</label>
+        <input type="date" id="date" name="date" required />
+
+        <label for="time">ساعت:</label>
+        <input type="time" id="time" name="time" required />
+
+        <button type="submit">ثبت نوبت</button>
+      </form>
+    </section>
+
+  </main>
+
+</body>
+</html>

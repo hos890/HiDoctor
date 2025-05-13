@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>داشبورد بیمار | Hi Doctor</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="patient-header">
+    <h1>داشبورد بیمار</h1>
+  </header>
+
+  <main class="patient-main">
+    <section class="patient-status">
+      <h2>وضعیت سلامت شما</h2>
+      <p>فشار خون: ۱۲/۸، ضربان قلب: ۷۵</p>
+    </section>
+
+    <section class="patient-messages">
+      <h2>پیغام‌ها</h2>
+      <ul>
+        <li>در حال حاضر مشکلی گزارش نشده است.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>علائم حیاتی</title>
+</head>
+<body>
+
+  <!-- نوار وضعیت علائم حیاتی -->
+  <div id="vital-signs">
+    <p>ضربان قلب: <span id="heart-rate">80</span> BPM</p>
+    <p>فشار خون: <span id="blood-pressure">120/80</span> mmHg</p>
+  </div>
+
+  <script>
+    // به‌روزرسانی داده‌ها به صورت تصادفی
+    function updateVitals() {
+      document.getElementById('heart-rate').textContent = Math.floor(Math.random() * 40 + 60);
+      document.getElementById('blood-pressure').textContent = `${Math.floor(Math.random() * 20 + 100)}/80`;
+    }
+
+    // به‌روزرسانی هر ۵ ثانیه
+    setInterval(updateVitals, 5000);
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>هشدار</title>
+</head>
+<body>
+
+  <!-- پاپ‌آپ هشدار -->
+  <div id="alert-banner" style="display:none; background-color: red; color: white; padding: 10px; text-align: center;">
+    هشدار: وضعیت بحرانی! لطفاً کمک فوری بگیرید.
+  </div>
+
+  <script>
+    // نمایش هشدار بعد از ۵ ثانیه
+    function showAlert() {
+      document.getElementById('alert-banner').style.display = 'block';
+    }
+
+    setTimeout(showAlert, 5000); // ۵ ثانیه بعد نمایش داده میشه
+  </script>
+
+</body>
+</html>

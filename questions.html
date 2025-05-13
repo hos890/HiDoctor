@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>پرسشنامه سلامت</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>پرسشنامه سلامت</h1>
+    </header>
+
+    <main>
+        <section class="questionnaire-section">
+            <h2>آیا امروز دچار تنگی نفس شدید؟</h2>
+            <label>
+                <input type="radio" name="shortness_of_breath" value="yes"> بله
+            </label>
+            <label>
+                <input type="radio" name="shortness_of_breath" value="no"> خیر
+            </label>
+        </section>
+
+        <section class="questionnaire-section">
+            <h2>آیا درد قفسه سینه دارید؟</h2>
+            <label>
+                <input type="radio" name="chest_pain" value="yes"> بله
+            </label>
+            <label>
+                <input type="radio" name="chest_pain" value="no"> خیر
+            </label>
+        </section>
+
+        <section class="questionnaire-section">
+            <h2>آیا الکل یا مواد مصرف کرده‌اید؟</h2>
+            <label>
+                <input type="radio" name="substance_use" value="yes"> بله
+            </label>
+            <label>
+                <input type="radio" name="substance_use" value="no"> خیر
+            </label>
+            <label>
+                <input type="radio" name="substance_use" value="no_answer"> تمایلی به پاسخ ندارم
+            </label>
+        </section>
+
+        <button onclick="submitQuestionnaire()">ارسال</button>
+
+        <a href="patient.html" class="back-link">بازگشت به داشبورد بیمار</a>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

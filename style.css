@@ -1,0 +1,1089 @@
+/* فونت و تنظیمات پایه */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Vazirmatn", sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    direction: rtl;
+  }
+  
+  /* بخش اصلی - تصویر پس‌زمینه */
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7);
+  }
+  
+  /* لایه متنی روی تصویر */
+  .overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    z-index: 2;
+  }
+  
+  .overlay h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .overlay p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* دکمه انتخاب نقش */
+  .role-selection {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .role-button {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid #fff;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .role-button img {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .role-button:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  
+  /* دکمه ورود */
+  .login-link {
+    margin-top: 1rem;
+  }
+  
+  .login-button {
+    background-color: #38b2ac;
+    color: white;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #319795;
+  }
+  
+  /* --------------------------- */
+  /* ریسپانسیو برای موبایل و تبلت */
+  /* --------------------------- */
+  
+  @media (max-width: 768px) {
+    .overlay h1 {
+      font-size: 2rem;
+    }
+  
+    .overlay p {
+      font-size: 1rem;
+    }
+  
+    .role-selection {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .role-button {
+      width: 90%;
+      justify-content: center;
+    }
+  
+    .login-button {
+      width: 80%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .overlay {
+      padding: 1rem;
+    }
+  
+    .overlay h1 {
+      font-size: 1.6rem;
+    }
+  
+    .overlay p {
+      font-size: 0.95rem;
+    }
+  
+    .role-button {
+      font-size: 1rem;
+      padding: 0.8rem 1.2rem;
+    }
+  
+    .role-button img {
+      width: 20px;
+      height: 20px;
+    }
+  
+    .login-button {
+      font-size: 0.95rem;
+      padding: 0.6rem 1.5rem;
+    }
+  }
+  /* --------------------------- */
+/* صفحه ورود (login.html) */
+/* --------------------------- */
+
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+    padding: 1rem;
+  }
+  
+  .login-box {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .login-box h2 {
+    margin-bottom: 1.5rem;
+    color: #2c7a7b;
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: right;
+  }
+  
+  .login-form label {
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+  
+  .login-form input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 0.8rem;
+    font-size: 1rem;
+  }
+  
+  .submit-button {
+    background-color: #2c7a7b;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #285e61;
+  }
+  
+  .register-prompt {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .register-prompt a {
+    color: #2c7a7b;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  /* --------------------------- */
+/* صفحه ثبت‌نام (register.html) */
+/* --------------------------- */
+
+.register-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #e0f7fa, #ffffff);
+    padding: 1rem;
+  }
+  
+  .register-box {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .register-box h2 {
+    margin-bottom: 1.5rem;
+    color: #2c7a7b;
+  }
+  
+  .register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: right;
+  }
+  
+  .register-form label {
+    font-weight: 600;
+    margin-bottom: 0.2rem;
+  }
+  
+  .register-form input {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 0.8rem;
+    font-size: 1rem;
+  }
+  
+  .login-prompt {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .login-prompt a {
+    color: #2c7a7b;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  /* --------------------------- */
+/* داشبورد پزشک و بیمار         */
+/* --------------------------- */
+
+.dashboard-header {
+    background-color: #38b2ac;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .dashboard-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  
+  .logout-button {
+    background-color: #fff;
+    color: #38b2ac;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .logout-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .dashboard-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    text-align: right;
+  }
+  
+  .card h2 {
+    margin-top: 0;
+    color: #2c7a7b;
+  }
+  
+  .card p {
+    margin: 0.5rem 0 0;
+    color: #555;
+  }
+  /* --------------------------- */
+/* صفحه درباره ما (About)     */
+/* --------------------------- */
+
+.about-header {
+    text-align: center;
+    background-color: #38b2ac;
+    color: white;
+    padding: 2rem 1rem;
+    border-bottom: 4px solid #319795;
+  }
+  
+  .about-main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .about-section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .about-section h2 {
+    color: #2c7a7b;
+    margin-bottom: 0.8rem;
+  }
+  
+  .about-section p,
+  .about-section ul {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  
+  .about-section ul {
+    padding-right: 1.5rem;
+    list-style-type: disc;
+  }
+  /* --------------------------- */
+/* صفحه پروفایل (Profile)     */
+/* --------------------------- */
+
+.profile-header {
+    text-align: center;
+    background-color: #38b2ac;
+    color: white;
+    padding: 2rem 1rem;
+    border-bottom: 4px solid #319795;
+  }
+  
+  .profile-main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .profile-section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .profile-section h2 {
+    color: #2c7a7b;
+    margin-bottom: 0.8rem;
+  }
+  
+  .profile-section p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .profile-section form {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  .profile-section input {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .profile-section button {
+    padding: 1rem;
+    background-color: #38b2ac;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  /* --------------------------- */
+/* داشبورد دکتر (Doctor Dashboard) */
+/* --------------------------- */
+
+.doctor-header {
+    text-align: center;
+    background-color: #38b2ac;
+    color: white;
+    padding: 2rem 1rem;
+    border-bottom: 4px solid #319795;
+  }
+  
+  .doctor-main {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .doctor-patients, .doctor-messages {
+    margin-bottom: 2.5rem;
+  }
+  
+  .doctor-patients h2, .doctor-messages h2 {
+    color: #2c7a7b;
+    margin-bottom: 0.8rem;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  th, td {
+    padding: 0.8rem;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #38b2ac;
+    color: white;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    background-color: #f4f4f4;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  /* --------------------------- */
+/* داشبورد بیمار (Patient Dashboard) */
+/* --------------------------- */
+
+.patient-header {
+    text-align: center;
+    background-color: #38b2ac;
+    color: white;
+    padding: 2rem 1rem;
+    border-bottom: 4px solid #319795;
+  }
+  
+  .patient-main {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .patient-status, .patient-messages {
+    margin-bottom: 2.5rem;
+  }
+  
+  .patient-status h2, .patient-messages h2 {
+    color: #2c7a7b;
+    margin-bottom: 0.8rem;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    background-color: #f4f4f4;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  /* --------------------------- */
+/* صفحه ورود                   */
+/* --------------------------- */
+
+.login-header {
+    text-align: center;
+    background-color: #38b2ac;
+    color: white;
+    padding: 2rem 1rem;
+    border-bottom: 4px solid #319795;
+  }
+  
+  .login-main {
+    padding: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .login-form .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .login-form label {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .btn {
+    background-color: #38b2ac;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  .btn:hover {
+    background-color: #319795;
+  }
+  /* --------------------------- */
+/* صفحه ثبت‌نام                */
+/* --------------------------- */
+
+.register-header {
+    text-align: center;
+    background-color: #38b2ac;
+    color: white;
+    padding: 2rem 1rem;
+    border-bottom: 4px solid #319795;
+  }
+  
+  .register-main {
+    padding: 2rem;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .register-form .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .register-form label {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .register-form input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .btn {
+    background-color: #38b2ac;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  .btn:hover {
+    background-color: #319795;
+  }
+  .alert-btn {
+    background-color: #e53e3e;
+    color: white;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  .alert-btn:hover {
+    background-color: #c53030;
+  }
+  /* --------------------------- */
+/* واکنش‌گرایی (ریسپانسیو)      */
+/* --------------------------- */
+
+/* استایل برای موبایل */
+@media (max-width: 767px) {
+    .login-main, .register-main, .about-main {
+      padding: 1rem;
+      max-width: 100%;
+    }
+  
+    .login-form, .register-form {
+      width: 100%;
+    }
+  
+    .btn {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+  
+  /* استایل برای تبلت */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .login-main, .register-main, .about-main {
+      padding: 1.5rem;
+      max-width: 80%;
+    }
+  
+    .btn {
+      width: auto;
+      padding: 1rem 2rem;
+    }
+  }
+  
+  /* استایل برای دسکتاپ */
+  @media (min-width: 1025px) {
+    .login-main, .register-main, .about-main {
+      padding: 2rem;
+      max-width: 800px;
+    }
+  }
+  /* --------------------------- */
+/* صفحه پروفایل کاربر         */
+/* --------------------------- */
+
+.profile-header {
+    text-align: center;
+    background-color: #38b2ac;
+    color: white;
+    padding: 2rem 1rem;
+    border-bottom: 4px solid #319795;
+  }
+  
+  .profile-main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .profile-section {
+    margin-bottom: 2.5rem;
+  }
+  
+  .profile-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-form label {
+    margin: 0.5rem 0;
+  }
+  
+  .profile-form input {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .profile-form .btn {
+    background-color: #38b2ac;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  /* --------------------------- */
+/* صفحه مدیریت نوبت‌ها         */
+/* --------------------------- */
+
+.appointments-header {
+    text-align: center;
+    background-color: #38b2ac;
+    color: white;
+    padding: 2rem 1rem;
+    border-bottom: 4px solid #319795;
+  }
+  
+  .appointments-main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .appointments-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .appointments-table th,
+  .appointments-table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  .appointments-table th {
+    background-color: #38b2ac;
+    color: white;
+  }
+  /* --------------------------- */
+/* صفحه جزئیات پزشکی          */
+/* --------------------------- */
+
+.medical-header {
+    text-align: center;
+    background-color: #38b2ac;
+    color: white;
+    padding: 2rem 1rem;
+    border-bottom: 4px solid #319795;
+  }
+  
+  .medical-main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .medical-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .medical-table th,
+  .medical-table td {
+    padding: 1rem;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  .medical-table th {
+    background-color: #38b2ac;
+    color: white;
+  }
+  /* ----------------------------- */
+/* فرم پروفایل کاربر           */
+/* ----------------------------- */
+.profile-section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .profile-section form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-section label {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .profile-section input {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .profile-section button {
+    margin-top: 2rem;
+    padding: 0.8rem;
+    background-color: #38b2ac;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .profile-section button:hover {
+    background-color: #319795;
+  }
+  /* ------------------------------ */
+/* فرم مدیریت نوبت‌ها            */
+/* ------------------------------ */
+.appointments-section {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .appointments-section form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .appointments-section label {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+  }
+  
+  .appointments-section input, .appointments-section select {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .appointments-section button {
+    margin-top: 2rem;
+    padding: 0.8rem;
+    background-color: #38b2ac;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .appointments-section button:hover {
+    background-color: #319795;
+  }
+  /* ----------------------------- */
+/* نوتیفیکیشن اورژانسی         */
+/* ----------------------------- */
+.emergency-notification {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: red;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    z-index: 1000;
+    text-align: center;
+  }
+  /* ========================= */
+/* 💻 واکنش‌گرایی دسکتاپ کوچک */
+/* ========================= */
+@media (max-width: 1200px) {
+    .container {
+      padding: 1.5rem;
+    }
+  }
+  
+  /* ========================= */
+  /* 📱 واکنش‌گرایی تبلت */
+  /* ========================= */
+  @media (max-width: 768px) {
+    .main-section,
+    .profile-section,
+    .appointments-section {
+      padding: 1rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    input,
+    select,
+    button {
+      font-size: 1rem;
+    }
+  }
+  
+  /* ========================= */
+  /* 📱 واکنش‌گرایی موبایل */
+  /* ========================= */
+  @media (max-width: 480px) {
+    body {
+      font-size: 14px;
+    }
+  
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  
+    .profile-section input,
+    .appointments-section input,
+    .appointments-section select,
+    button {
+      width: 100%;
+    }
+  }
+  /* --------------------------- */
+/* استایل برای داشبورد پزشک */
+/* --------------------------- */
+
+.doctor-header {
+    background-color: #38b2ac;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    border-bottom: 4px solid #319795;
+  }
+  
+  .doctor-header h1 {
+    font-size: 2rem;
+  }
+  
+  .doctor-header nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .doctor-header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .doctor-header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .doctor-main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .patient-list h2,
+  .notifications h2 {
+    color: #2c7a7b;
+    margin-bottom: 1rem;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  table, th, td {
+    border: 1px solid #ccc;
+  }
+  
+  th, td {
+    padding: 12px;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #38b2ac;
+    color: white;
+  }
+  
+  .status {
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+  }
+  
+  .status.emergency {
+    background-color: #e53e3e;
+    color: white;
+  }
+  
+  .status.persistent {
+    background-color: #38b2ac;
+    color: white;
+  }
+  
+  .btn {
+    padding: 0.5rem 1rem;
+    background-color: #38b2ac;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .notifications ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .notifications li {
+    background-color: #f1f1f1;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .doctor-footer {
+    text-align: center;
+    background-color: #38b2ac;
+    color: white;
+    padding: 1rem;
+    margin-top: 2rem;
+  }
+  /* --------------------------- */
+/* استایل برای جزئیات بیمار */
+/* --------------------------- */
+
+.patient-details-main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .patient-info h2,
+  .patient-history h2,
+  .patient-actions h2 {
+    color: #2c7a7b;
+    margin-bottom: 1rem;
+  }
+  
+  .patient-info p,
+  .patient-history ul {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  
+  .patient-history ul {
+    list-style-type: disc;
+    padding-right: 1.5rem;
+  }
+  
+  .patient-actions button {
+    padding: 0.5rem 1rem;
+    background-color: #38b2ac;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  
+  .patient-actions button:hover {
+    background-color: #319795;
+  }
+  

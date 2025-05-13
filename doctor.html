@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>داشبورد پزشک | Hi Doctor</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="doctor-header">
+    <h1>داشبورد پزشک</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">خانه</a></li>
+        <li><a href="patient.html">بیمار</a></li>
+        <li><a href="logout.html">خروج</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="doctor-main">
+
+    <!-- Patient List Section -->
+    <section class="patient-list">
+      <h2>لیست بیماران</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>نام بیمار</th>
+            <th>سن</th>
+            <th>وضعیت</th>
+            <th>عملیات</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>محمد احمدی</td>
+            <td>35</td>
+            <td><span class="status">پایدار</span></td>
+            <td><a href="patient-details.html" class="btn">مشاهده</a></td>
+          </tr>
+          <tr>
+            <td>سارا علوی</td>
+            <td>40</td>
+            <td><span class="status emergency">اورژانسی</span></td>
+            <td><a href="patient-details.html" class="btn">مشاهده</a></td>
+          </tr>
+          <!-- بیماران بیشتر در اینجا اضافه شوند -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Emergency Notifications -->
+    <section class="notifications">
+      <h2>هشدارهای اورژانسی</h2>
+      <ul>
+        <li>بیمار سارا علوی نیاز به مراقبت فوری دارد.</li>
+        <li>بیمار محمد احمدی به وضعیت پایدار رسیده است.</li>
+        <!-- هشدارهای بیشتر در اینجا اضافه شوند -->
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="doctor-footer">
+    <p>حق کپی‌رایت &copy; 2025 Hi Doctor</p>
+  </footer>
+
+</body>
+</html>
